@@ -1,0 +1,11 @@
+{
+  "name": "moderation-panel-bot",
+  "version": "1.0.0",
+  "description": "Modpanel Bot that allows for kicking banning and muting users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nate",
+  "license": "ISC"
+}

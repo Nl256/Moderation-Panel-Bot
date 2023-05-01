@@ -1,0 +1,8 @@
+{
+    "token": "your-bot-token",
+    "clientId": "your-client-id",
+    "guildId": "your-guild-id",
+    "allowedRoles": ["Moderator"],
+    "immuneUsers": ["user-id-1", "user-id-2"]
+  }
+  
