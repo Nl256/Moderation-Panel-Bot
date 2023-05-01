@@ -1,10 +1,17 @@
 // index.js
 const fs = require('fs');
-const { Client, Intents } = require('discord.js');
+const { Client, GatewayIntentBits } = require('discord.js');
 const config = require('./config.json');
 const registerCommands = require('./utils/registerCommands');
 
-const client = new Client({ intents: [Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_BANS, Intents.FLAGS.GUILD_MESSAGES] });
+const client = new Client({ intents: intents: [
+		GatewayIntentBits.Guilds,
+		GatewayIntentBits.GuildMessages,
+		GatewayIntentBits.MessageContent,
+		GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.GuildPresences,
+	],
+});
 
 // Read the command files and register the slash commands
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
