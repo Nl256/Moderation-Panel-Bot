@@ -4,13 +4,25 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const config = require('./config.json');
 const registerCommands = require('./utils/registerCommands');
 
-const client = new Client({ intents: intents: [
-		GatewayIntentBits.Guilds,
-		GatewayIntentBits.GuildMessages,
-		GatewayIntentBits.MessageContent,
-		GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildPresences,
-	],
+const client = new Client({ intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers,
+GatewayIntentBits.GuildPresences,
+GatewayIntentBits.GuildModeration,
+GatewayIntentBits.GuildIntegrations,
+GatewayIntentBits.GuildInvites,
+GatewayIntentBits.GuildVoiceStates,
+GatewayIntentBits.GuildMessageReactions,
+GatewayIntentBits.GuildMessageTyping,
+GatewayIntentBits.DirectMessages,
+GatewayIntentBits.DirectMessageReactions,
+GatewayIntentBits.DirectMessageTyping,
+GatewayIntentBits.GuildBans,
+GatewayIntentBits.GuildEmojisAndStickers,
+GatewayIntentBits.GuildWebhooks,
+],
 });
 
 // Read the command files and register the slash commands
@@ -38,5 +50,6 @@ client.on('interactionCreate', async interaction => {
     }
   }
 });
+
 
 client.login(config.token);
